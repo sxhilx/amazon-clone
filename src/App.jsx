@@ -1,21 +1,16 @@
-import { useState } from 'react'
 import Navbar from './components/Navbar'
-import FeatureCard from './components/FeatureCard'
-import { ShopSchool } from './assets/featureImages'
 import Footer from './components/Footer'
-import Home from './sections/Home'
+import { Outlet } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className="flex flex-col min-h-screen bg-[#E3E6E6]">
+      <div className="flex flex-col min-h-screen">
         <Navbar />
         <div className="flex-grow">
-          <Home />
+          <Outlet/>
         </div>
-        {/* Footer will stay at the bottom */}
         <Footer />
       </div>
     </>

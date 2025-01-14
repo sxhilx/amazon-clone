@@ -4,6 +4,24 @@ import { amazonLogo } from "../assets/icons";
 const Footer = () => {
     return(
         <div className="flex flex-col">
+            <div className="bg-white w-full flex flex-col">
+                <div className="mt-8">
+                    <hr className="border border-gray-200 w-full my-4" />
+                </div>
+                <div className="flex flex-col justify-center items-center p-5">
+                
+                    <div className="text-[2rem] font-bold">See personalised recommendations</div>
+                    <div>
+                        <button className="hover:bg-[#FFCE12] bg-[#ffd633] w-60 py-2 rounded-full">Sign In</button>
+                    </div>
+                    <div className="text-sm m-1">
+                    New customer? <span className="text-blue-700 hover:text-blue-900 cursor-pointer underline">Start here.</span>
+                    </div>
+                </div>
+                <div className="mb-8">
+                    <hr className="border border-gray-200 w-full my-4" />
+                </div>
+            </div>
             <div className="scroll-top w-full cursor-pointer bg-[#343f4d] hover:bg-[#485769] text-center h-16"> 
                 <div 
                 className="text-md font-medium text-white m-5"

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { amazonLogo } from '../assets/icons'
 import {backToSchool} from '../assets/images'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     const [location, setLocation] = useState("Durban")
@@ -15,9 +16,11 @@ const Navbar = () => {
             <div className='m-0 top-navbar bg-primary w-full h-[62px] gap-1'>
                 <div className='flex pt-1'>
                 <div className='flex w-[130px] p-1'>
-                    <div className='ml-3 p-1 border border-transparent hover:border-white box-border cursor-pointer rounded-sm'>
-                        <img src={amazonLogo} alt="Amazon" className=''/>
-                    </div>
+                    <Link to='/'>
+                        <div className='ml-3 p-1 border border-transparent hover:border-white box-border cursor-pointer rounded-sm'>
+                            <img src={amazonLogo} alt="Amazon" className=''/>
+                        </div>
+                    </Link>
                 </div>
                 <div className='p-1 '>
                     <div className='flex flex-col ml-2 p-1 leading-none border border-transparent hover:border-white box-border rounded-sm cursor-pointer'>
@@ -98,11 +101,15 @@ const Navbar = () => {
                             <div className='text-white font-bold text-xs'>All</div>
                         </div>
                     </div>
-                    <div className='pl-2 pr-2 border border-transparent rounded-sm hover:border-white cursor-pointer'>
-                        <div className='p-2 text-white font-medium text-sm'>
-                            Todays's Deal
+
+                    <Link to='/todays-deal'>
+                        <div className='pl-2 pr-2 border border-transparent rounded-sm hover:border-white cursor-pointer'>
+                            <div className='p-2 text-white font-medium text-sm'>
+                                Todays's Deal
+                            </div>
                         </div>
-                    </div>
+                    </Link>
+                    
                     <div className='pl-2 pr-2 border border-transparent rounded-sm hover:border-white cursor-pointer'>
                         <div className='p-2 text-white font-medium text-sm'>
                             Gift Cards

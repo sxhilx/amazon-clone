@@ -6,7 +6,7 @@ const FeatureCard = ({title, image, linkText}) => {
             <div className="p-4 bg-white ">
                 <div className="font-bold text-3xl">{title}</div>
                 <div className="mt-4 mb-4 w-full">
-                    <img src={image} alt="Image" className="h-96 object-cover" />
+                    <img src={image} alt="Image" className="h-80 object-cover" />
                 </div>
                 <div className="text-blue-600 hover:text-[#0C3353] my-2">
                     {linkText}
