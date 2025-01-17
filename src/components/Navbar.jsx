@@ -3,17 +3,13 @@ import { amazonLogo } from '../assets/icons'
 import {backToSchool} from '../assets/images'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({toggleSidebar}) => {
     const [location, setLocation] = useState("Durban")
     const [cartItems, setCartItems] = useState(0)
 
-    const handleLocationChange = (newLocation) => {
-        setLocation(newLocation)
-    }
-
     return(
-        <header>
-            <div className='m-0 top-navbar bg-primary w-full h-[62px] gap-1'>
+        <header className=''>
+            <div className='relative m-0 top-navbar bg-primary w-full h-[62px] gap-1'>
                 <div className='flex pt-1'>
                 <div className='flex w-[130px] p-1'>
                     <Link to='/'>
@@ -93,9 +89,13 @@ const Navbar = () => {
                 </div>
                 </div>
             </div>
-            <div className='flex main-navbar w-full h-10 bg-secondary'>
+
+            
+            <div className='relative flex main-navbar w-full h-10 bg-secondary'>
                 <div className='flex items-center w-3/4'>
-                    <div className=' ml-3 border border-transparent hover:border-white rounded-sm cursor-pointer'>
+                    <div 
+                    className=' ml-3 border border-transparent hover:border-white rounded-sm cursor-pointer'
+                    onClick={toggleSidebar}>
                         <div className='flex justify-center items-center p-1'>
                             <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 7L4 7" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> <path d="M20 12L4 12" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> <path d="M20 17L4 17" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
                             <div className='text-white font-bold text-xs'>All</div>
@@ -110,19 +110,24 @@ const Navbar = () => {
                         </div>
                     </Link>
                     
-                    <div className='pl-2 pr-2 border border-transparent rounded-sm hover:border-white cursor-pointer'>
-                        <div className='p-2 text-white font-medium text-sm'>
-                            Gift Cards
+                    <Link to='/gift-cards'>
+                        <div className='pl-2 pr-2 border border-transparent rounded-sm hover:border-white cursor-pointer'>
+                            <div className='p-2 text-white font-medium text-sm'>
+                                Gift Cards
+                            </div>
                         </div>
-                    </div>
+                    </Link>
+
+                    <Link to='/customer-service'>
                     <div className='pl-2 pr-2 border border-transparent rounded-sm hover:border-white cursor-pointer'>
                         <div className='p-2 text-white font-medium text-sm'>
                             Customer Service
                         </div>
                     </div>
+                    </Link>
                     <div className='pl-2 pr-2 border border-transparent rounded-sm hover:border-white cursor-pointer'>
                         <div className='p-2 text-white font-medium text-sm'>
-                            Keep Shopping for
+                            Electronics
                         </div>
                     </div>
                     <div className='pl-2 pr-2 border border-transparent rounded-sm hover:border-white cursor-pointer'>

@@ -22,9 +22,15 @@ const TodaysDealProduct = ({className}) => {
                             <span className="line-through">R {TodaysDealProp.actualAmount}</span>
                         </span>
                     </div>
-                    <div className="truncate text-[1rem] font-medium">
+                    <div className="flex justify-start">
+                    <div className=" bg-[#ffde59] hover:bg-[#FFCE12] w-32 flex items-center justify-center rounded-lg">
+                        <button className="font-semibold p-2">Add to Basket</button>
+                    </div>
+                    </div>
+                    <div className="truncate text-[1rem] font-medium mt-1">
                         {TodaysDealProp.title}
                     </div>
+                    
                 </div>
             ))}
         </div>

@@ -16,7 +16,6 @@ const Home = () => {
                     muted
                     className="w-full h-full object-cover"
                 ></video>
-                <div className="absolute left-0 top-[340px] w-full h-full bg-gradient-to-b from-slate-400 to-transparent"></div>
             </div>
             <div className="grid grid-cols-4 gap-7 relative top-[-3.5rem] mx-8">
                 {FeatureCardProps.map((FeatureCardProp) => (
@@ -29,7 +28,24 @@ const Home = () => {
             <div className="mx-8 mt-8">
                 <ShopCategories/>
             </div>
-            <div className="bg-white w-full mt-8 flex flex-col">{/* Empty container for margin */}</div>
+            <div className="bg-white w-full flex flex-col mt-8">
+                <div className="mt-8">
+                    <hr className="border border-gray-200 w-full my-4" />
+                </div>
+                <div className="flex flex-col justify-center items-center p-5">
+                
+                    <div className="text-[2rem] font-bold">See personalised recommendations</div>
+                    <div>
+                        <button className="hover:bg-[#FFCE12] bg-[#ffd633] w-60 py-2 rounded-full">Sign In</button>
+                    </div>
+                    <div className="text-sm m-1">
+                    New customer? <span className="text-blue-700 hover:text-blue-900 cursor-pointer underline">Start here.</span>
+                    </div>
+                </div>
+                <div className="mb-8">
+                    <hr className="border border-gray-200 w-full my-4" />
+                </div>
+            </div>
         </div>
     );
 };
