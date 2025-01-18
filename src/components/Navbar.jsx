@@ -125,21 +125,22 @@ const Navbar = ({toggleSidebar}) => {
                         </div>
                     </div>
                     </Link>
+
+                    <Link to='/electronics'>
                     <div className='pl-2 pr-2 border border-transparent rounded-sm hover:border-white cursor-pointer'>
                         <div className='p-2 text-white font-medium text-sm'>
                             Electronics
                         </div>
                     </div>
-                    <div className='pl-2 pr-2 border border-transparent rounded-sm hover:border-white cursor-pointer'>
-                        <div className='p-2 text-white font-medium text-sm'>
-                            Shop Mazansi
-                        </div>
-                    </div>
+                    </Link>
+                    
+                    <Link to='/welcome-page'>
                     <div className='pl-2 pr-2 border border-transparent rounded-sm hover:border-white cursor-pointer'>
                         <div className='p-2 text-white font-medium text-sm'>
                             Welcome to Amazon.co.za
                         </div>
                     </div>
+                    </Link>
                 </div>
                 <div className='w-1/4'>
                     <img src={backToSchool} alt="Back To School" className='w-full cursor-pointer' />

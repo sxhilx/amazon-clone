@@ -40,6 +40,17 @@ import {
     featuredCard4,
     featuredCard5 } from "../assets/giftcardImages";
 
+
+import {  
+    airpodsPro,
+    asusLaptop,
+    banner,
+    dgiDrone,
+    googleTv,
+    jblSpeaker,
+    samsungA35 } from "../assets/electrnoicsImages";
+import { amazonLogo } from "../assets/icons";
+
 export const FeatureCardProps = [
     {
         title: "Shop Back School",
@@ -338,4 +349,38 @@ export const featuredGiftCards = [
     {
         image: featuredCard5,
     },
+]
+
+export const electronicProducts = [
+    {
+        image: airpodsPro,
+        amount: "5,050",
+        title: "Apple AirPods Pro 2 Wireless Earbuds"
+    },
+    {
+        image: asusLaptop,
+        amount: "6,999",
+        title: "ASUS Vivobook 15 IntelCore™ i3-1215U 8GB DDR4 512GB SSD FHD Windows 11 Home 15.6 inch Notebook"
+    },
+    {
+        image: dgiDrone,
+        amount: "24,999",
+        title: "DJI Mini 4 Pro Fly More Combo Plus with RC 2 Controller "
+    },
+    {
+        image: googleTv,
+        amount: "5,999",
+        title: "Smart TV UHD 4k, 50 inch size"
+    },
+    {
+        image: jblSpeaker,
+        amount: "1,899",
+        title: "JBL Flip 6 Portable Bluetooth Speaker, Black "
+    },
+    {
+        image: samsungA35,
+        amount: "5,000",
+        title: "Samsung A35 Smart Phone"
+    },
+
 ]

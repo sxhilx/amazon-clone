@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import TodaysDeal from './sections/TodaysDeal.jsx'
 import CustomerService from './sections/CustomerService.jsx'
 import GiftCards from './sections/GiftCards.jsx'
+import Electronics from './sections/Electronics.jsx'
+import WelcomePage from './sections/WelcomePage.jsx'
 
 
 const router = createBrowserRouter([
@@ -30,7 +32,14 @@ const router = createBrowserRouter([
         path: '/gift-cards',
         element: <GiftCards/>
       },
-
+      {
+        path: '/electronics',
+        element:<Electronics/>
+      },
+      {
+        path: '/welcome-page',
+        element: <WelcomePage/>
+      }
     ]
   }
 ])
