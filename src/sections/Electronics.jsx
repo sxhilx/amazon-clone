@@ -9,7 +9,7 @@ const Electronics = () => {
             <div className="flex mb-2">
                 <FilterPanel/>
                 <div className="right-section w-[85%] overflow-y-auto">
-                <h1 className="font-semibold mx-4 my-2 text-3xl">Eectronics</h1>
+                <h1 className="font-semibold mx-4 my-2 text-3xl">Electronics</h1>
                 <div className="my-2 mx-4">
                     <img src={banner} alt="banner" />
                 </div>

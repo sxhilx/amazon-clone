@@ -1,4 +1,3 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -9,6 +8,9 @@ import CustomerService from './sections/CustomerService.jsx'
 import GiftCards from './sections/GiftCards.jsx'
 import Electronics from './sections/Electronics.jsx'
 import WelcomePage from './sections/WelcomePage.jsx'
+import { Provider } from 'react-redux'
+import store from './store/store.js'
+import Cart from './sections/Cart.jsx'
 
 
 const router = createBrowserRouter([
@@ -39,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: '/welcome-page',
         element: <WelcomePage/>
+      },
+      {
+        path: '/cart',
+        element: <Cart/>
       }
     ]
   }
@@ -46,7 +52,9 @@ const router = createBrowserRouter([
 
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+
+  <Provider store={store}>
     <RouterProvider router={router}/>
-  </StrictMode>,
+  </Provider>
+
 )

@@ -1,7 +1,16 @@
 import React from "react";
 import { electronicProducts } from "../constant/Index";
+import { useDispatch } from "react-redux";
+import { addItem } from "../store/cartSlice";
+import Notification from "./Notification";
 
 const ElectronicProducts = ({className}) => {
+    const dispatch = useDispatch()
+
+    const handleAddToCart = (product) => {
+        dispatch(addItem(product))
+    }
+
     return(
         <div className={`${className}`}>
             {electronicProducts.map((product) => (
@@ -15,7 +24,10 @@ const ElectronicProducts = ({className}) => {
                         <span className="text-xs">00</span>
                     </div>
                     <div className="flex justify-start">
-                    <div className=" bg-[#ffde59] hover:bg-[#FFCE12] w-32 flex items-center justify-center rounded-lg">
+                    <div 
+                    className=" bg-[#ffde59] hover:bg-[#FFCE12] w-32 flex items-center justify-center rounded-lg"
+                    onClick={() => handleAddToCart(product)}
+                    >
                         <button className="font-semibold p-2">Add to Basket</button>
                     </div>
                     </div>
