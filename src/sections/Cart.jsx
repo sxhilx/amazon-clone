@@ -7,6 +7,8 @@ const Cart = () => {
     const cartItems = useSelector((state) => state.cart.items);
     const dispatch = useDispatch()
 
+    console.log(cartItems)
+
     const handleRemoveFromCart = (product) => {
         dispatch(removeItem(product))
     }
@@ -50,6 +52,7 @@ const Cart = () => {
                                         <span className="text-xl font-medium">{item.amount}</span>
                                         <span className="text-xs">00</span>
                                     </div>
+
                                 </div>
                             ))
                         ) : (

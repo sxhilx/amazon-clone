@@ -22,9 +22,12 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         addItem: (state, action) => {
-            const item = action.payload
-            state.items.push(item);
-            localStorage.setItem("cartItems", JSON.stringify(state.items))
+            const item = action.payload;            
+            const existingItem = state.items.find(existingItem => existingItem.image === item.image);
+            if(!existingItem){
+                state.items.push(item)
+                localStorage.setItem("cartItems", JSON.stringify(state.items))
+            }
 
         },
         removeItem: (state, action) => {

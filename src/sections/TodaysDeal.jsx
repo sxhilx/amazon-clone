@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 import TodaysDealProduct from '../components/TodaysDealProduct'
 import FilterPanel from "../components/FilterPanel";
+import Notification from "../components/Notification";
 
 const TodaysDeal = () => {
+
+     const [notification, setNotification] = useState(false)
+    
+    const handleNotification = () => {
+        setNotification((prev) => !prev)
+    }
+
+    setTimeout(() => {
+        setNotification(false)
+    }, 2000)
 
     return(
         <div className="bg-white">
@@ -11,7 +22,8 @@ const TodaysDeal = () => {
             <div className="flex">
                 <FilterPanel/>
                 <div className="right-section w-[80%] overflow-y-auto">
-                        <TodaysDealProduct className={'grid mx-16 grid-cols-5 gap-7  cursor-pointer'}/>
+                        <TodaysDealProduct className={'grid mx-16 grid-cols-5 gap-7  cursor-pointer'}
+                        toggleNotification={handleNotification}/>
                 </div>
             </div>
             <div className="bg-white w-full flex flex-col">
@@ -31,6 +43,11 @@ const TodaysDeal = () => {
                 <div className="mb-8">
                     <hr className="border border-gray-200 w-full my-4" />
                 </div>
+            </div>
+            <div className="transition">
+                {notification && (
+                    <Notification message={"Added to basket"}/>
+                )}
             </div>
         </div>
     )

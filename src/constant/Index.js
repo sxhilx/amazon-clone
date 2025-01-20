@@ -23,7 +23,15 @@ import {TodaysDeal,
     sports,
     toys } from "../assets/shopCategories";
 
-import {TabletImage} from "../assets/todaysDealImages";
+import {
+    TabletImage,
+    airFryer,
+    drill,
+    earbuds,
+    headsets,
+    oilPack,
+    watch,
+    tablet2 } from "../assets/todaysDealImages";
 
 import { account, 
     contactUs,
@@ -49,6 +57,7 @@ import {
     googleTv,
     jblSpeaker,
     samsungA35 } from "../assets/electrnoicsImages";
+
 import { amazonLogo } from "../assets/icons";
 
 export const FeatureCardProps = [
@@ -97,52 +106,59 @@ export const FeatureCardProps = [
 export const TodaysDealProps = [
     {
         image: TabletImage,
+        amount: "26,086.09",
+        title: "Samsung Galaxy S10 Ultra Tablet with Keyboard Cover and 45W Charger ",
         offPercent: "25",
         offAmount: "22,400",
-        actualAmount: "26,086.09",
-        title: "Samsung Galaxy S10 Ultra Tablet with Keyboard Cover and 45W Charger "
     },
     {
-        image: TabletImage,
-        offPercent: "25",
-        offAmount: "22,400",
-        actualAmount: "26,086.09",
-        title: "Samsung Galaxy S10 Ultra Tablet with Keyboard Cover and 45W Charger "
+        image: airFryer,
+        amount: "1,690",
+        title: "Philips NA231/00 2000 Series 6,2L Digital Airfryer",
+        offPercent: "52",
+        offAmount: "2,499",
     },
     {
-        image: TabletImage,
-        offPercent: "25",
-        offAmount: "22,400",
-        actualAmount: "26,086.09",
-        title: "Samsung Galaxy S10 Ultra Tablet with Keyboard Cover and 45W Charger "
+        image: drill,
+        amount: "2,590",
+        title: "Hand drill",
+        offPercent: "20",
+        offAmount: "1,980",
     },
     {
-        image: TabletImage,
-        offPercent: "25",
-        offAmount: "22,400",
-        actualAmount: "26,086.09",
-        title: "Samsung Galaxy S10 Ultra Tablet with Keyboard Cover and 45W Charger "
+        image: earbuds,
+        amount: "6,499",
+        title: "Sony WF1000XM5/B Premium True Wireless Stereo Earbuds, Black ",
+        offPercent: "38",
+        offAmount: "4,046",
     },
     {
-        image: TabletImage,
+        image: headsets,
+        amount: "7,900",
+        title: "Sennheiser Momentum 4 Wireless Headphones, Bluetooth for Crystal-Clear Calls w/Adaptive Noise Cancellation.",
         offPercent: "25",
-        offAmount: "22,400",
-        actualAmount: "26,086.09",
-        title: "Samsung Galaxy S10 Ultra Tablet with Keyboard Cover and 45W Charger "
+        offAmount: "4187",
     },
     {
-        image: TabletImage,
-        offPercent: "25",
-        offAmount: "22,400",
-        actualAmount: "26,086.09",
-        title: "Samsung Galaxy S10 Ultra Tablet with Keyboard Cover and 45W Charger "
+        image: watch,
+        amount: "6,499",
+        title: "Garmin Forerunner 165 Running Smartwatch, Mist Grey/Whitestone",
+        offPercent: "19",
+        offAmount: "5,237",
     },
     {
-        image: TabletImage,
+        image: tablet2,
+        amount: "4,198",
+        title: "Packard Bell Silverstone T11 4GB+128GB LTE 10.1-Inch Tablet with Free Folio Cover",
+        offPercent: "41",
+        offAmount: "2,489",
+    },
+    {
+        image: oilPack,
+        amount: "1,990",
+        title: "Oil Pack",
         offPercent: "25",
-        offAmount: "22,400",
-        actualAmount: "26,086.09",
-        title: "Samsung Galaxy S10 Ultra Tablet with Keyboard Cover and 45W Charger "
+        offAmount: "1,290",
     },
 ]
 
